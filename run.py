@@ -12,7 +12,7 @@ def sendreq():
 		count = count + 1
 		
 		pword=line.replace('\n', '') #do not change
-		auth_req = requests.request('GET', 'http://192.168.210.201', auth=(username, pword))
+		auth_req = requests.request('GET', 'http://192.168.1.1', auth=(username, pword))
 		
 		if (auth_req.status_code == 200):
 			print("[+] Status code 200 detected.", "The password is "+pword)
